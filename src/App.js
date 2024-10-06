@@ -1,9 +1,11 @@
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import styled from 'styled-components'
+
+const Position = styled.div `position: relative; height: 100vh;`;
 
 function App() {
-
   const BodyProps = {
     name: "박준수",
     location: "용인시",
@@ -13,13 +15,13 @@ function App() {
     ],
   };
 
-  return (
-    <div className="App">
+  return (<>
+    <Position>
       <Header></Header>
       <Main {...BodyProps}></Main>
       <Footer></Footer>
-    </div>
-  );
+    </Position>
+  </>);
 }
 
 export default App;
